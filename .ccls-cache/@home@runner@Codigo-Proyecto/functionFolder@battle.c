@@ -138,7 +138,7 @@ void atacarBarco(Board *tablero, Board *tableroVacio) {
     printf("Ya atacaste esta posición. Intente de nuevo.\n");  // Verificar si la posición ya ha sido atacada
     sleep(2); // Pausa de 2 segundos para que el mensaje sea visible
     
-    return;
+    atacarBarco(tablero, tableroVacio);  // Volver a solicitar la posición de ataque
 
   }
 
@@ -152,7 +152,7 @@ void atacarBarco(Board *tablero, Board *tableroVacio) {
 
     marcarAtaqueExitoso(tablero, row, col);  // Registrar el ataque exitoso en el mapa de resultados
 
-    } else if (tablero->tablero[row][col] == '~') {
+  } else if (tablero->tablero[row][col] == '~') {
 
     printf("Ataque fallido. No hay barco en %c%d.\n", fila, columna);  // Mensaje de ataque fallido
     usleep(2000000);  // Espera de 2 segundos
@@ -161,12 +161,14 @@ void atacarBarco(Board *tablero, Board *tableroVacio) {
     tableroVacio->tablero[row][col] = 'O'; // Marcar el fallo en el tablero vacío
 
     marcarAtaqueFallido(tablero, row, col);  // Registrar el ataque fallido en el mapa de resultados
-    }
+    
+  }
 }
 
 void agregarAtaque(List *lista, int row, int col) {
 
-  struct Ataque *ataque = (struct Ataque *) malloc(sizeof(struct Ataque));  // Crear una nueva estructura de ataque
+  struct Ataque *ataque = (struct Ataque *) malloc(sizeof(struct Ataque));
+  // Crear una nueva estructura de ataque
 
   if (ataque == NULL) {
 
@@ -216,8 +218,10 @@ void atacarBarcoComputadora(Board *tablero) {
 
   // Repetir si la posición ya ha sido atacada ('X' o 'O')
   while (tablero->tablero[row][col] == 'X' || tablero->tablero[row][col] == 'O') { 
+    
     row = rand() % tablero->height;
     col = rand() % tablero->width;
+    
   }
 
   // Mostrar el ataque de la computadora en la consola
@@ -226,13 +230,17 @@ void atacarBarcoComputadora(Board *tablero) {
 
   // Procesar el resultado del ataque
   if (tablero->tablero[row][col] == '*') {
+    
     printf("¡La computadora ha acertado en %c%d!\n", 'A' + row, col + 1); 
     usleep(2000000);  // Esperar 2 segundos antes de continuar
     tablero->tablero[row][col] = 'X';  // Marcar como acierto en el tablero
+    
   } else {
+    
     printf("La computadora ha fallado en %c%d.\n", 'A' + row, col + 1);
     usleep(2000000);  // Esperar 2 segundos antes de continuar
     tablero->tablero[row][col] = 'O';  // Marcar como fallo en el tablero
+    
   }
 }
 
@@ -265,7 +273,8 @@ void inicializarBatalla(Board *tablero) {
 
       mostrarTablero(&tableroVacio, 3); // Mostrar tablero vacío y tablero del jugador
       printf("\n\n");
-      mostrarTablero(tablero, 2); 
+      mostrarTablero(tablero, 2);
+      printf("\n");
 
       sleep(2);
 
@@ -285,6 +294,7 @@ void inicializarBatalla(Board *tablero) {
       mostrarTablero(&tableroVacio, 3); // Mostrar tablero vacío y tablero del jugador después del ataque
       printf("\n\n");
       mostrarTablero(tablero, 2);
+      printf("\n");
 
       sleep(2);
 
@@ -306,6 +316,7 @@ void inicializarBatalla(Board *tablero) {
       mostrarTablero(&tableroVacio, 3); // Mostrar tablero vacío y tablero del jugador
       printf("\n\n");
       mostrarTablero(tablero, 2);
+      printf("\n");
 
       sleep(2);
 
@@ -325,6 +336,7 @@ void inicializarBatalla(Board *tablero) {
       mostrarTablero(&tableroVacio, 3); // Mostrar tablero vacío y tablero del jugador después del ataque
       printf("\n\n");
       mostrarTablero(tablero, 2);
+      printf("\n");
 
       sleep(2);
       

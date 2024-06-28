@@ -137,7 +137,7 @@ void mostrarTablero(Board *tablero, int parametro) {
       break;
 
     case 3:
-      puts("        TABLERO ENEMIGO\n"); usleep(350000);
+      puts("          TABLERO ENEMIGO\n"); usleep(350000);
       break;
 
   }
