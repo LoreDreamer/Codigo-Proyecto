@@ -36,7 +36,6 @@ long hash( char * key, long capacity) {
   char * ptr;
   
   for (ptr = key; *ptr != '\0'; ptr++) {
-    
     hash += hash*32 + tolower(*ptr);
     
   }
@@ -72,8 +71,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       map->buckets[posicion] = new_pair;
       map->size++;
       map->current = posicion;
-      
-    return;
+      return;
       
     } else if (is_equal(current_pair->key, key)) {
       

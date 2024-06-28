@@ -229,11 +229,25 @@ Ingrese la posición a atacar (ej. A3 para fila A y columna 3):
 
 ````
 
-Finalmente, cuando alguien gana se muestra el siguiente mensaje:
+Finalmente, según quien gane se muestra alguno de los siguientes mensajes:
 
 ````
 ¡Felicidades! Has ganado la batalla.
 ````
+````
+La computadora ha ganado la batalla.
+````
+
+## Cosas a mejorar de programa
+
+Si bien, el programa funciona correctamente de principio a fin, hay ciertas cosas que podrían funcionar mejor, tales como:
+
+- Si uno selecciona un tamaño de tablero, a la hora de organizar los barcos, si el jugador ingresa una posición que está fuera de los límites del tablero, el programa avisará que es una posición invalida, pero esto después de pedir una orientación, cuando lo correcto sería que diera el aviso inmediatamente.
+
+- También al organizar los barcos, se pueden poner las coordenadas tanto en mayúsculas como en minúsculas, pero en el momento de elegir la orientación de este debe ser en mayúsculas, ya que en minúsculas no lo reconoce.
+
+- La IA implementada en este programa si bien, funciona correctamente y no ataca posiciones que ha atacado previamente, etc. No tiene un patrón de ataque en base a si ha acertado un ataque, es decir, si su último ataque ha sido exitoso, no ataca las posiciones adyacentes para terminar de hundir un posible barco de un tamaño mayor a 1.
+
 
 
 ## Contribuciones para la codificación del juego por cada integrante del grupo.
