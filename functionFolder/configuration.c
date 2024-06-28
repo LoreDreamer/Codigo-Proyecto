@@ -439,7 +439,7 @@ void elegirTamanoTablero(Board *tablero) {
     liberarTablero(tablero); // Liberar el tablero actual antes de cambiar el tamaño
     inicializarTablero(tablero, width, height); // Inicializar el nuevo tablero con el tamaño especificado
     
-    printf("\nTablero actualizado a %d x %d.\n", width, height);
+    printf("\nTablero actualizado a %d x %d.", width, height);
     sleep(2);
   }
 }
