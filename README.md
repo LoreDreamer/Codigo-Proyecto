@@ -228,3 +228,20 @@ E    ~  ~  ~  ~  ~
 Ingrese la posición a atacar (ej. A3 para fila A y columna 3): 
 
 ````
+
+Finalmente, cuando alguien gana se muestra el siguiente mensaje:
+
+````
+¡Felicidades! Has ganado la batalla.
+````
+
+
+## Contribuciones para la codificación del juego por cada integrante del grupo.
+
+- **Eduardo Cordero**: Eduardo, como programador asistente del código, ha contribuido al código con implementaciones clave, tales como lo son todos los menú interactivos del programa, y la parte estética de este, de modo que el programa se muestre de forma llamativa y fácil de entender para el usuario, separando las funciones del código en carpetas. Además de ser programador de 'soporte', resolviendo problemas de segmentación presentes durante el proceso de codificación del juego.
+
+- **Francisca Guzmán**: Francisca ha liderado la implementación del código como programadora principal. Se ha encargado de multiples funciones, tales como la que muestra las instrucciones, la que se encarga de la configuración de los tableros, donde se elige un tamaño personalizado de este, y se organizan los barcos en este. Además, fue la implementadora de la IA encargada de configurar el tablero de la computadora, hacer sus jugadas, etc.
+
+- **Ignacio Matus de la Parra**: Ignacio, como programador asistente del código, ha colaborado en la implementación de funciones específicas, tales como la que verifica que haya una victoria tanto del jugador como de la maquina, también siendo programador de 'soporte', ayudando a identificar problemas y resolverlos junto a los demás integrantes. Además realizó el presente archivo README.md que introduce el proyecto de forma clara y proporciona instrucciones detalladas para compilar, ejecutar y utilizar el juego, incluyendo ejemplos específicos para cada opción del menú en tu código de Battleship. Puedes ajustar los detalles de contacto y cualquier otra especificación según tus necesidades.
+
+- **Vicente Quezada**: Vicente ha liderado el equipo como programador principal del código, él ha implementado las *tdas* y *structs* del código y muchas de las funciones más relevantes de este, tales como la función encargada de inicializar los tableros, o la de ataque. Además ha solucionado problemas de segmentación durante el código, teniendo un rol muy activo en este código. 
