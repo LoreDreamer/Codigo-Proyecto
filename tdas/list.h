@@ -3,39 +3,26 @@
 
 typedef struct List List;
 
-// Esta función crea una lista vacía y devuelve un puntero a la lista.
-List *list_create();
+List *list_create(); // Crea una lista vacía
 
-// Esta función devuelve un puntero al primer elemento de la lista.
-void *list_first(List *L);
+void *list_first(List *L); // Devuelve el primer elemento de la lista
 
-// Esta función mueve el puntero de la lista al siguiente elemento y devuelve un
-// puntero a dicho elemento.
-void *list_next(List *L);
+void *list_next(List *L); // Devuelve el siguiente elemento de la lista
 
-// Esta función inserta un nuevo elemento al inicio de la lista.
-void list_pushFront(List *L, void *dato);
+void list_pushFront(List *L, void *dato); // Agrega un elemento al frente de la lista
 
-// Esta función inserta un nuevo elemento al final de la lista.
-void list_pushBack(List *L, void *dato);
+void list_pushBack(List *L, void *dato); // Agrega un elemento al final de la lista
 
-// Esta función inserta un nuevo elemento a continuación del actual de la lista.
-void list_pushCurrent(List *L, void *dato);
+void list_pushCurrent(List *L, void *dato); // Agrega un elemento en la posición actual de la lista
 
-// Esta función elimina el primer elemento de la lista.
-void *list_popFront(List *L);
+void *list_popFront(List *L); // Elimina y devuelve el primer elemento de la lista
 
-// Esta función elimina el último elemento de la lista.
-void *list_popBack(List *L);
+void *list_popBack(List *L); // Elimina y devuelve el último elemento de la lista
 
-// Esta función elimina el elemento actual de la lista.
-void *list_popCurrent(List *L);
+void *list_popCurrent(List *L); // Elimina y devuelve el elemento en la posición actual de la lista
 
-// Esta función elimina todos los elementos de la lista.
-void list_clean(List *L);
+void list_clean(List *L); // Limpia la lista y liberación de memoria
 
-// Función para insertar ordenado de acuerdo a la función lower_than
-void list_sortedInsert(List *L, void *data,
-                       int (*lower_than)(void *data1, void *data2));
+void list_sortedInsert(List *L, void *data, int (*lower_than)(void *data1, void *data2)); // Inserta un elemento en la lista ordenada
 
 #endif
