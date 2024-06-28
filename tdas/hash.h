@@ -13,24 +13,26 @@
 typedef struct HashMap HashMap;
 
 typedef struct Pair {
+
      char * key;
      void * value;
+
 } Pair;
 
-HashMap * createMap(long capacity);
+HashMap * createMap(long capacity); // Crea un mapa con la capacidad especificada
 
-void insertMap(HashMap * table, char * key, void * value);
+void insertMap(HashMap * table, char * key, void * value); // Inserta un par <key, value> en el mapa
 
-void eraseMap(HashMap * table, char * key);
+void eraseMap(HashMap * table, char * key); // Elimina el par asociado a la clave especificada del mapa
 
-Pair * searchMap(HashMap * table, char * key);
+Pair * searchMap(HashMap * table, char * key); // Busca el par asociado a la clave especificada en el mapa
 
-Pair * firstMap(HashMap * table);
+Pair * firstMap(HashMap * table); // Devuelve el primer par del mapa
 
-Pair * nextMap(HashMap * table);
+Pair * nextMap(HashMap * table); // Devuelve el siguiente par del mapa
 
-void enlarge(HashMap * map);
+void enlarge(HashMap * map); // Aumenta la capacidad del mapa
 
-void map_clean(HashMap * map);
+void map_clean(HashMap * map); // Libera la memoria asignada al mapa
 
 #endif /* HashMap_h */
