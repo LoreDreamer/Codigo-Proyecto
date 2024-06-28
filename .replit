@@ -1,4 +1,4 @@
-compile = ["make", "-s"]
+compile = "gcc tdas/*.c functionFolder/*.c main.c -Wno-unused-result -o main"
 run = "./main"
 entrypoint = "main.c"
 hidden = ["main", "main-debug", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
@@ -54,7 +54,7 @@ name = "g++ - Build and debug active file"
 program = "./main-debug"
 request = "launch"
 setupCommands = [
-	{ description = "Enable pretty-printing for gdb", ignoreFailures = true, text = "-enable-pretty-printing" }
+	{ description = "Enable pretty-printing for gdb", ignoreFailures = true, text = "-enable-pretty-printing" },
 ]
 stopAtEntry = false
 type = "cppdbg"

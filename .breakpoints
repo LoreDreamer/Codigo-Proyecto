@@ -1,3 +1,12 @@
 {
-  "files": {}
+  "files": {
+    "functionFolder/battle.c": [
+      {
+        "id": "d55e0b5c-f0b0-42f2-8db7-94aa3c084577",
+        "line": 351,
+        "version": 852,
+        "index": 11316
+      }
+    ]
+  }
 }
