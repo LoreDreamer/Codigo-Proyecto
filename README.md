@@ -1,3 +1,5 @@
+# BATTLESHIP
+
 En este *repl* se puede encontrar un código que implementa el clásico juego de mesa Batalla Naval, adaptado para ser jugado en la consola. El juego permite al usuario jugar contra la computadora, colocando sus barcos, realizando ataques a tabero enemigo, y verificando quién gana a través de un menú interactivo. 
 
 ## Compilación del código.
