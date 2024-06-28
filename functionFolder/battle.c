@@ -42,6 +42,8 @@ struct Ataque {
 
 };
 
+
+//Funcion para la ubicacion aleatoria de barcos para la IA 
 void colocarBarcosAleatoriamente(Board *tablero) {
 
   int barcosSizes[] = {1, 2, 3, 4};  // Tamaños posibles de los barcos
@@ -78,7 +80,7 @@ void colocarBarcosAleatoriamente(Board *tablero) {
     }
   }
 }
-
+//Funcion para marcar los ataques con exito en el tablero
 void marcarAtaqueExitoso(Board *tablero, int row, int col) {
 
   char posicion[5];
@@ -88,7 +90,7 @@ void marcarAtaqueExitoso(Board *tablero, int row, int col) {
   insertMap(tablero->resultadosAtaques, posicion, "X");
 
 }
-
+//Funcion para marcar los ataques errados en el tablero
 void marcarAtaqueFallido(Board *tablero, int row, int col) {
 
   char posicion[5];
@@ -99,6 +101,7 @@ void marcarAtaqueFallido(Board *tablero, int row, int col) {
 
 }
 
+//Funcion para atacar el tablero del contrincante
 void atacarBarco(Board *tablero, Board *tableroVacio) {
 
   char fila;
@@ -164,7 +167,6 @@ void atacarBarco(Board *tablero, Board *tableroVacio) {
     
   }
 }
-
 void agregarAtaque(List *lista, int row, int col) {
 
   struct Ataque *ataque = (struct Ataque *) malloc(sizeof(struct Ataque));
@@ -183,6 +185,7 @@ void agregarAtaque(List *lista, int row, int col) {
   list_pushBack(lista, ataque);  // Agregar el ataque a la lista
 
 }
+
 
 // Función para verificar si se ha alcanzado la condición de victoria
 bool verificarVictoria(Board tablero) {

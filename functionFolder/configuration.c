@@ -37,7 +37,7 @@ struct Barco {
     char orient; // 'H' para horizontal, 'V' para vertical
 
 };
-
+//Funcion para colocar un barco en el tablero
 void colocarBarco(Board *tablero, Barco *barco) {
     
   int x = barco->row;
@@ -74,6 +74,7 @@ void colocarBarco(Board *tablero, Barco *barco) {
     
   list_pushBack(tablero->barcos, barco); // Add ship to the list
 }
+//Funcion para sacar un barco del tablero si es necesario
 void sacarBarcoTablero(Board *tablero, Barco *barco) {
 
   int x = barco->row;          // Fila inicial del barco
@@ -94,7 +95,7 @@ void sacarBarcoTablero(Board *tablero, Barco *barco) {
   }
 }
 
-
+//Funcion para cambiar de posicion el barco que nosotros queramos
 void cambioDePosicion(Board *tablero) {
 
   char opcion; // Variable para almacenar la opción del usuario
@@ -273,7 +274,7 @@ void cambioDePosicion(Board *tablero) {
   } while (opcion != 'N' && opcion != 'n'); // Repetir mientras el usuario no elija salir
 }
 
-
+//Funcion para organizar la flota de barcos en nuestro tablero
 void organizarFlota(Board *tablero) {
 
   repoblarTablero(tablero); // Repoblar el tablero
@@ -400,7 +401,7 @@ void organizarFlota(Board *tablero) {
 
   tablero->flotaOrganizada = true; // Marcar la flota como organizada
 }
-
+//Funcion para elegir el tamaño deseado del tablero
 void elegirTamanoTablero(Board *tablero) {
 
   int width, height; // Variables para almacenar el ancho y alto del tablero
@@ -443,7 +444,7 @@ void elegirTamanoTablero(Board *tablero) {
     sleep(2);
   }
 }
-
+//Funcion para validar si la posicion ingresada por el usuario esta ocupada por otro barco
 bool validarPosicion(Board *tablero, Barco *barco) {
 
   int x = barco->row;
