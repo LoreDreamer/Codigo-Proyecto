@@ -17,26 +17,24 @@
 
 struct Board {
 
-  char **tablero;
+  char **tablero;           // Matriz que representa el tablero del juego
+  HashMap *resultadosAtaques; // Mapa para almacenar los resultados de los ataques realizados
+  int width;                // Ancho del tablero
+  int height;               // Alto del tablero
+  List *barcos;             // Lista de los barcos en el tablero
+  bool flotaOrganizada;     // Indicador de si la flota está organizada o no
 
-  HashMap *resultadosAtaques;
-
-  int width;
-  int height;
-
-  List *barcos;
-  bool flotaOrganizada;
-
-};
+}; 
 
 struct Barco {
 
-    int size;     
-    int row;     // Fila inicial (A = 0, B = 1, ..., Z = 25)
-    int col;     // Columna inicial (0, 1, 2, ...)
-    char orient; // 'H' para horizontal, 'V' para vertical
+  int size;                 // Tamaño del barco
+  int row;                  // Fila inicial de la posición del barco
+  int col;                  // Columna inicial de la posición del barco
+  char orient;              // Orientación del barco ('H' para horizontal, 'V' para vertical)
 
 };
+
 //Funcion para colocar un barco en el tablero
 void colocarBarco(Board *tablero, Barco *barco) {
     

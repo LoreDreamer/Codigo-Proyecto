@@ -6,7 +6,7 @@
 #include "../tdas/hash.h"  
 
 #include <stdbool.h>        
-#include <unistd.h>          // Incluye la biblioteca estándar para el uso de funciones relacionadas con el sistema POSIX
+#include <unistd.h>          
 #include <stdio.h>         
 #include <stdlib.h>          
 #include <string.h>          
@@ -37,8 +37,8 @@ struct Barco {
 
 struct Ataque {
 
-    int row;                // Fila del ataque
-    int col;                // Columna del ataque
+  int row;                // Fila del ataque
+  int col;                // Columna del ataque
 
 };
 
