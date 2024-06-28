@@ -3,33 +3,24 @@
 
 #include <stdbool.h>
 
-typedef struct Board Board;  // Declaración anticipada de la estructura Board
+typedef struct Board Board; // Declaración anticipada de la estructura Board
 
-// Función para limpiar la pantalla
-void limpiarPantalla();
+void limpiarPantalla(); // Función para limpiar la pantalla
 
-// Función para pausar la ejecución hasta que se presione una tecla
-void presioneTeclaParaContinuar();
+void presioneTeclaParaContinuar(); // Función para pausar la ejecución hasta que se presione una tecla
 
-// Función para mostrar el menú principal del juego
-void mostrarMenuPrincipal();
+void mostrarMenuPrincipal(); // Función para mostrar el menú principal del juego
 
-// Función para inicializar el tablero con las dimensiones especificadas
-void inicializarTablero(Board *tablero, int width, int height);
+void inicializarTablero(Board *tablero, int width, int height); // Función para inicializar el tablero con las dimensiones especificadas
 
-// Función para liberar la memoria asignada al tablero
-void liberarTablero(Board *tablero);
+void liberarTablero(Board *tablero); // Función para liberar la memoria asignada al tablero
 
-// Función para mostrar el tablero con un encabezado específico basado en el parámetro
-void mostrarTablero(Board *tablero, int parametro);
+void mostrarTablero(Board *tablero, int parametro); // Función para mostrar el tablero con un encabezado específico basado en el parámetro
 
-// Función para determinar aleatoriamente quién toma el primer turno
-bool determinarPrimerTurno();
+bool determinarPrimerTurno(); // Función para determinar aleatoriamente quién toma el primer turno
 
-// Función para llenar el tablero con un valor predeterminado
-void repoblarTablero(Board *tablero);
+void repoblarTablero(Board *tablero); // Función para llenar el tablero con un valor predeterminado
 
-// Función para mostrar las instrucciones del juego
-void instrucciones();
+void instrucciones(); // Función para mostrar las instrucciones del juego
 
 #endif

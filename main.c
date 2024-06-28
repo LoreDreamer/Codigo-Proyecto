@@ -64,19 +64,23 @@ int main() {
     switch (opcion) {
 
     case '1':
+      
       mostrarMenuConfiguracion(&tablero); // Mostrar el menú de configuración
       break;
 
     case '2':
+      
       instrucciones();               // Mostrar las instrucciones del juego
       break;
 
     case '3':
+      
       puts("Saliendo del juego..."); // Mostrar mensaje de salida
       liberarTablero(&tablero);      // Liberar la memoria del tablero
       break;
 
     default:
+      
       puts("Opción no válida.\n");   // Mostrar mensaje de opción no válida
       presioneTeclaParaContinuar();  // Esperar a que el usuario presione Enter
       break;
